@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         anchor.addEventListener("click", function (e) {
 
-            const target = document.querySelector(this.getAttribute("href"));
+            const hash = this.getAttribute("href");
+            if (hash === "#") return;
+
+            const target = document.querySelector(hash);
 
             if (!target) return;
 
@@ -205,6 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealOnScroll();
 
+    // On mobile/tablet (< 992px) the hero items are always in view —
+    // force show immediately so opacity:0 never leaves them invisible
+    if (window.innerWidth < 992) {
+        revealItems.forEach(item => item.classList.add("show"));
+    }
+
+    // Also call again after a short delay to catch any render-lag on slow devices
+    setTimeout(revealOnScroll, 100);
+
     window.addEventListener("scroll", revealOnScroll);
 
 
@@ -215,9 +227,69 @@ document.addEventListener("DOMContentLoaded", () => {
     const serviceCards = document.querySelectorAll(".service-card");
     const counterActive = document.querySelector(".counter-active");
 
+    function updatePaginationText(activeIndex) {
+        const paginations = document.querySelectorAll(".pagination-text");
+        paginations.forEach(pag => {
+            const spans = pag.querySelectorAll("span");
+            spans.forEach((span, idx) => {
+                if (idx === activeIndex) {
+                    span.classList.add("active");
+                } else {
+                    span.classList.remove("active");
+                }
+            });
+        });
+    }
+
+    let servicesSwiper = null;
+
+    function initServicesSlider() {
+        const screenWidth = window.innerWidth;
+        const container = document.querySelector(".services-swiper");
+
+        if (screenWidth < 992) {
+            if (!servicesSwiper && container) {
+                servicesSwiper = new Swiper(".services-swiper", {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    spaceBetween: 20,
+                    initialSlide: 0,
+                    on: {
+                        slideChange: function() {
+                            updatePaginationText(this.activeIndex);
+                        }
+                    }
+                });
+            }
+        } else {
+            if (servicesSwiper) {
+                servicesSwiper.destroy(true, true);
+                servicesSwiper = null;
+
+                // Clear inline styles from wrapper and slides
+                const wrapper = document.querySelector(".services-swiper .swiper-wrapper");
+                if (wrapper) wrapper.removeAttribute("style");
+                const slides = document.querySelectorAll(".services-swiper .swiper-slide");
+                slides.forEach(slide => slide.removeAttribute("style"));
+
+                // Reset pagination to first card or active card
+                updatePaginationText(0);
+            }
+        }
+    }
+
+    // Call init initially and on resize
+    initServicesSlider();
+    window.addEventListener("resize", initServicesSlider);
+
     serviceCards.forEach((card, idx) => {
 
         card.addEventListener("click", () => {
+            // If on mobile/tablet, slide to that card!
+            if (window.innerWidth < 992 && servicesSwiper) {
+                servicesSwiper.slideTo(idx);
+                return;
+            }
 
             // Remove active from all
             serviceCards.forEach(c => {
@@ -242,6 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (overlay) {
                 overlay.className = "service-card-overlay";
             }
+
+            // Update pagination text
+            updatePaginationText(idx);
 
             // Update counter
             if (counterActive) {
