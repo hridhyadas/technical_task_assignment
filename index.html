@@ -13,9 +13,14 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=3">
+
+
 </head>
 
 <body>
@@ -119,12 +124,12 @@
 
                         <!-- Floating Podcast Video Card -->
                         <div class="floating-video-card">
-                            <span class="video-badge-onair">
-                                <span class="badge-dot"></span>
-                                ON AIR
-                            </span>
                             <div class="video-card-inner">
                                 <img src="assets/images/video-thumb.png" alt="Podcast Video" class="video-thumb">
+                                <span class="video-badge-onair">
+                                    <span class="badge-dot"></span>
+                                    ON AIR
+                                </span>
                                 <button class="video-play-btn" aria-label="Play video">
                                     <i class="bi bi-play-fill"></i>
                                 </button>
@@ -152,8 +157,10 @@
                     <div class="slider-controls-pill">
 
                         <button class="slider-arrow-btn prev-slide" aria-label="Previous slide">
-                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 7H1M1 7L7 13M1 7L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 7H1M1 7L7 13M1 7L7 1" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
 
@@ -165,8 +172,10 @@
                         </div>
 
                         <button class="slider-arrow-btn next-slide" aria-label="Next slide">
-                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 7H19M19 7L13 1M19 7L13 13" stroke="white" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
 
@@ -339,7 +348,7 @@
 
                         </p>
 
-                        <div class="service-bottom">
+                        <div class="service-bottom d-none d-lg-flex">
 
                             <a href="#" class="read-btn">
 
@@ -371,100 +380,135 @@
 
                 <div class="col-lg-8">
 
-                    <div class="service-cards">
+                    <div class="service-cards swiper services-swiper">
 
-                        <!-- Card 1 -->
+                        <div class="swiper-wrapper">
 
-                        <article class="service-card large">
+                            <!-- Card 1 -->
 
-                            <img src="assets/images/s1.png" alt="Media Relations">
+                            <article class="service-card large swiper-slide">
 
-                            <div class="overlay"></div>
+                                <img src="assets/images/s1.png" alt="Media Relations">
 
-                            <div class="blur-overlay"></div>
+                                <div class="overlay"></div>
 
-                            <div class="card-content">
+                                <div class="blur-overlay"></div>
 
-                                <h3>
+                                <div class="card-content">
 
-                                    Media
+                                    <h3>
 
-                                    <span>
+                                        Media
 
-                                        Relations
+                                        <span>
 
-                                    </span>
+                                            Relations
 
-                                </h3>
+                                        </span>
 
-                                <p>
+                                    </h3>
 
-                                    Orange PR takes charge of all media
-                                    relations on behalf of our clients,
-                                    enabling them to concentrate on their
-                                    brand's daily requirements.
+                                    <p>
 
-                                </p>
+                                        Orange PR takes charge of all media
+                                        relations on behalf of our clients,
+                                        enabling them to concentrate on their
+                                        brand's daily requirements.
 
-                            </div>
+                                    </p>
 
-                            <button class="circle-btn" aria-label="Explore Media Relations">
-                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 7H17M17 7L11 1M17 7L11 13" stroke="#26425f" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
+                                </div>
 
-                        </article>
+                                <button class="circle-btn" aria-label="Explore Media Relations">
+                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7H17M17 7L11 1M17 7L11 13" stroke="#26425f" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
 
-                        <!-- Card 2 -->
+                            </article>
 
-                        <article class="service-card medium">
+                            <!-- Card 2 -->
 
-                            <img src="assets/images/s2.png" alt="Influencer">
+                            <article class="service-card medium swiper-slide">
 
-                            <div class="overlay"></div>
+                                <img src="assets/images/s2.png" alt="Influencer">
 
-                            <div class="blur-overlay"></div>
+                                <div class="overlay"></div>
 
-                            <div class="card-content">
+                                <div class="blur-overlay"></div>
 
-                                <h3>
+                                <div class="card-content">
 
-                                    Influencer
+                                    <h3>
 
-                                    <span>
+                                        Influencer
 
-                                        Management
+                                        <span>
 
-                                    </span>
+                                            Management
 
-                                </h3>
+                                        </span>
 
-                            </div>
+                                    </h3>
 
-                        </article>
+                                </div>
 
-                        <!-- Card 3 -->
+                            </article>
 
-                        <article class="service-card small">
+                            <!-- Card 3 -->
 
-                            <img src="assets/images/s3.png" alt="Events">
+                            <article class="service-card small swiper-slide">
 
-                            <div class="overlay"></div>
+                                <img src="assets/images/s3.png" alt="Events">
 
-                            <div class="blur-overlay"></div>
+                                <div class="overlay"></div>
 
-                            <div class="card-content">
+                                <div class="blur-overlay"></div>
 
-                                <h3>
+                                <div class="card-content">
 
-                                    Events
+                                    <h3>
 
-                                </h3>
+                                        Events
 
-                            </div>
+                                    </h3>
 
-                        </article>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Mobile pagination/button container -->
+                <div class="col-12 d-block d-lg-none mt-4">
+
+                    <div class="service-bottom mobile-service-bottom">
+
+                        <a href="#" class="read-btn">
+
+                            READ MORE
+
+                        </a>
+
+                        <div class="pagination-text">
+
+                            <span class="active">01</span>
+
+                            /
+
+                            <span>02</span>
+
+                            /
+
+                            <span>03</span>
+
+                        </div>
 
                     </div>
 
@@ -482,10 +526,13 @@
 
     <section id="why-choose-us" class="wcu-section">
 
-        <div class="wcu-container">
+        <div class="container position-relative">
 
-            <!-- Heading -->
-            <h2 class="wcu-heading">WHY CHOOSE ORANGE PR?</h2>
+            <!-- Background Box -->
+            <div class="wcu-bg-box">
+                <!-- Heading -->
+                <h2 class="wcu-heading">WHY CHOOSE ORANGE PR?</h2>
+            </div>
 
             <!-- Cards -->
             <div class="wcu-cards">
@@ -545,135 +592,193 @@
           TESTIMONIALS
     ============================ -->
 
-    <section id="testimonials" class="testi-section">
+    <section class="testimonials">
 
-        <!-- Mosaic: flex columns matching the reference layout exactly -->
-        <div class="testi-mosaic">
+        <div class="mosaic-wrap">
+            <svg viewBox="0 0 1042 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="clip1">
+                        <rect x="180" y="109" width="71" height="87" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip2">
+                        <rect x="180" y="201" width="71" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip3">
+                        <rect x="256" y="76" width="71" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip4">
+                        <rect x="256" y="169" width="71" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip5">
+                        <rect x="332" y="115" width="71" height="87" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip6">
+                        <rect x="408" y="81" width="71" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip7">
+                        <rect x="484" y="100" width="71" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip8">
+                        <rect x="561" y="78" width="70" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip9">
+                        <rect x="637" y="115" width="70" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip10">
+                        <rect x="713" y="75" width="70" height="88" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip11">
+                        <rect x="713" y="167" width="70" height="107" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip12">
+                        <rect x="789" y="109" width="71" height="87" rx="4" />
+                    </clipPath>
+                    <clipPath id="clip13">
+                        <rect x="789" y="201" width="71" height="87" rx="4" />
+                    </clipPath>
+                </defs>
+                <!-- Column 1 -->
+                <g class="mosaic-item">
+                    <rect x="180" y="42" width="71" height="61" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="180" y="109" width="71" height="87" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t1.png" x="180" y="109" width="71" height="87"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip1)" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="180" y="201" width="71" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t2.png" x="180" y="201" width="71" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip2)" />
+                </g>
 
-            <!-- Col 1: ghost top + 1 photo mid-low -->
-            <div class="tmc">
-                <div class="tm-ghost"></div>
-                <div class="testi-photo tm-sm"><img src="assets/images/s1.png" alt="Client"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s2.png" alt="Client"></div>
-            </div>
+                <!-- Column 2 -->
+                <g class="mosaic-item">
+                    <rect x="256" y="42" width="71" height="30" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="256" y="76" width="71" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t3.png" x="256" y="76" width="71" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip3)" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="256" y="169" width="71" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t4.png" x="256" y="169" width="71" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip4)" />
+                </g>
 
-            <!-- Col 2: 2 photos stacked, starts higher -->
-            <div class="tmc tmc--up1">
-                <div class="testi-photo tm-lg"><img src="assets/images/about.png" alt="Client"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s1.png" alt="Client"></div>
-            </div>
+                <!-- Column 3 -->
+                <g class="mosaic-item">
+                    <rect x="332" y="42" width="71" height="67" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="332" y="115" width="71" height="87" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t5.png" x="332" y="115" width="71" height="87"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip5)" />
+                </g>
 
-            <!-- Col 3: ghost top + 1 photo -->
-            <div class="tmc tmc--up2">
-                <div class="tm-ghost tm-ghost--sm"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s2.png" alt="Client"></div>
-            </div>
+                <!-- Column 4 -->
+                <g class="mosaic-item">
+                    <rect x="408" y="42" width="71" height="34" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="408" y="81" width="71" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t6.png" x="408" y="81" width="71" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip6)" />
+                </g>
 
-            <!-- Col 4: 1 tall photo, starts from top -->
-            <div class="tmc tmc--up3">
-                <div class="testi-photo tm-xl"><img src="assets/images/woman.png" alt="Client"></div>
-            </div>
+                <!-- Column 5 -->
+                <g class="mosaic-item">
+                    <rect x="484" y="42" width="71" height="53" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="484" y="100" width="71" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t7.png" x="484" y="100" width="71" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip7)" />
+                </g>
 
-            <!-- Col 5: ghost + 1 photo (city man) -->
-            <div class="tmc tmc--up2">
-                <div class="tm-ghost tm-ghost--sm"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s1.png" alt="Client"></div>
-            </div>
+                <!-- Column 6 -->
+                <g class="mosaic-item">
+                    <rect x="561" y="42" width="70" height="34" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="561" y="78" width="70" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t8.png" x="561" y="78" width="70" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip8)" />
+                </g>
 
-            <!-- Col 6: HEADING column (bottom-left) + 2 photos on right side -->
-            <div class="tmc tmc--heading">
-                <div class="testi-photo tm-lg"><img src="assets/images/s2.png" alt="Client"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/about.png" alt="Client"></div>
-            </div>
+                <!-- Column 7 -->
+                <g class="mosaic-item">
+                    <rect x="637" y="42" width="70" height="67" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="637" y="115" width="70" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t9.png" x="637" y="115" width="70" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip9)" />
+                </g>
 
-            <!-- Col 7: ghost top + 2 photos -->
-            <div class="tmc tmc--up1">
-                <div class="tm-ghost tm-ghost--sm"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s3.png" alt="Client"></div>
-                <div class="testi-photo tm-sm"><img src="assets/images/s1.png" alt="Client"></div>
-            </div>
+                <!-- Column 8 -->
+                <g class="mosaic-item">
+                    <rect x="713" y="42" width="70" height="29" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="713" y="75" width="70" height="88" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t10.png" x="713" y="75" width="70" height="88"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip10)" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="713" y="167" width="70" height="107" rx="4" fill="##F8F8F8" />
+                    <image href="assets/images/t11.png" x="713" y="167" width="70" height="107"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip11)" />
+                </g>
 
-            <!-- Col 8: 2 photos, starts from mid -->
-            <div class="tmc tmc--up2">
-                <div class="testi-photo tm-md"><img src="assets/images/about.png" alt="Client"></div>
-                <div class="testi-photo tm-md"><img src="assets/images/s2.png" alt="Client"></div>
-            </div>
-
-            <!-- Col 9: 1 photo far right -->
-            <div class="tmc tmc--up1">
-                <div class="testi-photo tm-lg"><img src="assets/images/woman.png" alt="Client"></div>
-            </div>
-
-            <!-- Heading: absolute bottom center -->
-            <h2 class="testi-heading">TESTIMONIALS</h2>
-
+                <!-- Column 9 -->
+                <g class="mosaic-item">
+                    <rect x="789" y="42" width="71" height="60" rx="4" fill="#F8F8F8" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="789" y="109" width="71" height="87" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t12.png" x="789" y="109" width="71" height="87"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip12)" />
+                </g>
+                <g class="mosaic-item">
+                    <rect x="789" y="201" width="71" height="87" rx="4" fill="#F8F8F8" />
+                    <image href="assets/images/t13.png" x="789" y="201" width="71" height="87"
+                        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip13)" />
+                </g>
+                <text x="521" y="272" text-anchor="middle" font-family="inter" font-weight="600" font-size="38"
+                    letter-spacing="1" fill="#1a1a1a">TESTIMONIALS</text>
+            </svg>
         </div>
 
-        <!-- Testimonial slider -->
-        <div class="testi-slider">
+        <div class="content">
+            <img class="avatar" src="assets/images/testimonial.png" alt="James Andrews">
+            <p class="quote">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of type
+                and scrambled it to make a type specimen book.
+            </p>
+            <p class="name">James Andrews</p>
+            <p class="role">CEO and Founder of the Company</p>
 
-            <!-- Slide 1 -->
-            <div class="testi-slide testi-slide--active" data-testi-idx="0">
-                <div class="testi-avatar">
-                    <img src="assets/images/s1.png" alt="James Andrews">
-                </div>
-                <blockquote class="testi-quote">
-                    Orange PR transformed our brand's presence in the region. Their media outreach was precise,
-                    strategic, and delivered real results. We saw a 3x increase in press coverage within just two months
-                    of working together.
-                </blockquote>
-                <p class="testi-name">James Andrews</p>
-                <p class="testi-role">CEO and Founder of the Company</p>
+            <div class="pagination">
+                <button aria-label="Previous testimonial">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <span class="current">01</span> / <span>02</span> / <span>03</span>
+                <button aria-label="Next testimonial">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="testi-slide" data-testi-idx="1">
-                <div class="testi-avatar">
-                    <img src="assets/images/s2.png" alt="Sarah Mitchell">
-                </div>
-                <blockquote class="testi-quote">
-                    Working with Orange PR was seamless from day one. Their influencer partnerships brought exactly the
-                    right audience to our product launch — authentic, engaged, and deeply aligned with our brand values.
-                </blockquote>
-                <p class="testi-name">Sarah Mitchell</p>
-                <p class="testi-role">Marketing Director, Luxe Lifestyle Co.</p>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="testi-slide" data-testi-idx="2">
-                <div class="testi-avatar">
-                    <img src="assets/images/about.png" alt="Rami Al Farsi">
-                </div>
-                <blockquote class="testi-quote">
-                    The events they curated for us were nothing short of spectacular. Every detail was handled with
-                    professionalism and creative flair. Our guests were impressed and our brand visibility soared
-                    overnight.
-                </blockquote>
-                <p class="testi-name">Rami Al Farsi</p>
-                <p class="testi-role">Founder, Prestige Events Group</p>
-            </div>
-
-        </div>
-
-        <!-- Navigation -->
-        <div class="testi-nav">
-            <button class="testi-arrow testi-arrow--prev" id="testiPrev" aria-label="Previous testimonial">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-            <span class="testi-counter">
-                <span class="testi-counter-active">01</span>
-                <span class="testi-counter-sep"> / </span>
-                <span class="testi-counter-total">02 / 03</span>
-            </span>
-            <button class="testi-arrow testi-arrow--next" id="testiNext" aria-label="Next testimonial">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
         </div>
 
     </section>
@@ -683,15 +788,15 @@
      CONTACT SECTION
 ========================= -->
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
 
         <div class="container-fluid p-0">
 
-            <div class="row g-0 align-items-center">
+            <div class="row g-0 align-items-stretch">
 
                 <!-- Left Image -->
 
-                <div class="col-lg-5">
+                <div class="col-lg-6">
 
                     <div class="contact-image">
 
@@ -703,7 +808,7 @@
 
                 <!-- Right Form -->
 
-                <div class="col-lg-7">
+                <div class="col-lg-6">
 
                     <div class="contact-wrapper">
 
@@ -747,7 +852,7 @@
 
                                     <div class="col-12">
 
-                                        <button type="submit">
+                                        <button class="submit-btn" type="submit">
 
                                             SUBMIT
 
@@ -918,7 +1023,12 @@
 
                             <li>
 
-                                <i class="bi bi-phone"></i>
+                                <svg width="19" height="19" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 2.5C4 2.22386 4.22386 2 4.5 2H10.5C10.7761 2 11 2.22386 11 2.5V12.5C11 12.7761 10.7761 13 10.5 13H4.5C4.22386 13 4 12.7761 4 12.5V2.5ZM4.5 1C3.67157 1 3 1.67157 3 2.5V12.5C3 13.3284 3.67157 14 4.5 14H10.5C11.3284 14 12 13.3284 12 12.5V2.5C12 1.67157 11.3284 1 10.5 1H4.5ZM6 11.65C5.8067 11.65 5.65 11.8067 5.65 12C5.65 12.1933 5.8067 12.35 6 12.35H9C9.1933 12.35 9.35 12.1933 9.35 12C9.35 11.8067 9.1933 11.65 9 11.65H6Z"
+                                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
 
                                 <span>
 
@@ -930,7 +1040,12 @@
 
                             <li>
 
-                                <i class="bi bi-envelope"></i>
+                                <svg width="19" height="19" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+                                        fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                </svg>
 
                                 <span>
 
@@ -967,17 +1082,22 @@
 
                 <div class="social-links">
 
-                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><img src="assets/images/fb.svg" alt="Facebook" style="width: 24px; height: 24px;"></a>
 
-                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><img src="assets/images/twitter.svg" alt="Twitter"
+                            style="width: 24px; height: 24px;"></a>
 
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><img src="assets/images/linkedin.svg" alt="Linkedin"
+                            style="width: 24px; height: 24px;"></a>
 
-                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><img src="assets/images/instagram.svg" alt="Instagram"
+                            style="width: 24px; height: 24px;"></a>
 
-                    <a href="#"><i class="bi bi-pinterest"></i></a>
+                    <a href="#"><img src="assets/images/pinterest.svg" alt="Pinterest"
+                            style="width: 24px; height: 24px;"></a>
 
-                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="#"><img src="assets/images/youtube.svg" alt="Youtube"
+                            style="width: 24px; height: 24px;"></a>
 
                 </div>
 
@@ -989,6 +1109,9 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- JS -->
     <script src="assets/js/script.js"></script>
